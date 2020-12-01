@@ -28,6 +28,12 @@
             android:title="@string/title_show_google_app" />
 
         <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_enable_exthmui_feed"
+            android:summary="@string/pref_show_google_now_summary"
+            android:title="@string/title_show_exthmui_feed" />
+
+        <SwitchPreference
             android:key="pref_allowRotation"
             android:title="@string/allow_rotation_title"
             android:summary="@string/allow_rotation_desc"

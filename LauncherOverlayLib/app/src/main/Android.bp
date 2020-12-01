@@ -1,0 +1,13 @@
+android_library {
+    name: "LauncherOverlayLib",
+
+    srcs: [
+        "java/**/*.java",
+        "aidl/**/*.aidl"],
+
+    aidl: {
+        local_include_dirs: ["aidl"]
+    },
+
+    sdk_version: "current",
+}

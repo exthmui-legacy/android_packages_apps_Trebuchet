@@ -48,6 +48,7 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.exthmui.ExthmLauncherCallbacks;
 import com.android.launcher3.graphics.GridOptionsProvider;
 import com.android.launcher3.lineage.LineageLauncherCallbacks;
 import com.android.launcher3.lineage.LineageUtils;
@@ -76,6 +77,7 @@ public class SettingsActivity extends Activity
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
 
     public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+    public static final String KEY_EXTHMUI_FEED = "pref_enable_exthmui_feed";
     public static final String KEY_TRUST_APPS = "pref_trust_apps";
     public static final String KEY_ICON_PACK = "pref_icon_pack";
 
@@ -258,6 +260,10 @@ public class SettingsActivity extends Activity
                     return LineageUtils.hasPackageInstalled(getActivity(),
                             LineageLauncherCallbacks.SEARCH_PACKAGE);
 
+                case KEY_EXTHMUI_FEED:
+                    return LineageUtils.hasPackageInstalled(getActivity(),
+                            ExthmLauncherCallbacks.EXTHMUI_FEED_PACKAGE);
+        
                 case KEY_TRUST_APPS:
                     preference.setOnPreferenceClickListener(p -> {
                         LineageUtils.showLockScreen(getActivity(),

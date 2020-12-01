@@ -62,7 +62,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     LauncherPluginLib \
-    libGoogleFeed
+    libGoogleFeed \
+    LauncherOverlayLib
 
 LOCAL_SRC_FILES := \
     $(call all-proto-files-under, protos) \
